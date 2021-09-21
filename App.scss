@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+.App {
+  font-family: Roboto;
+  min-width: 360px;
+  .image{
+    max-width: 416px;
+    img{
+      width: 100%;
+    }
+  }
+
+  .info-blocks{
+    width: 90%;
+    padding: 0 12px 12px 12px;
+    
+    .badges{
+      height: 20pt;
+      display: inline-flex;
+      background-color: #fa00001c;
+      border-radius: 5px;
+      font-family: Roboto;
+      
+      div + div {
+        margin-left: 5px;
+      }
+
+      .icon{
+        background: url('icons8-ok.png');
+        height: 12px;
+        width: 12px;
+        display: inline-block;
+      }
+      .ready-to-ship{
+        padding: 2pt;
+        color: white;
+        border-radius: 5px 0 0 5px;
+        background-image: linear-gradient( 100deg, rgba(255, 72, 0, 0.808), rgba(255, 0, 64, 0.822) )
+      }
+
+      .in-stock{
+        padding: 2pt;
+       color: #FF6600;
+       span + span {
+        margin-left: 5px;
+       }
+      }
+      .fast-dispatch{
+        padding: 2pt;
+        color: #FF6600;
+        span + span {
+          margin-left: 5px;
+         }
+      }
+    }
+    .product-name{
+     
+      padding: 2pt; 
+      
+      .text-right{
+        float: right;
+        height:20pt;
+        
+        color:#999999;
+        background-color: #EDF0F3;
+        border-radius: 2px;
+        margin-right:12px;
+        padding: 2px 8px;
+      }
+    }
+
+    .ratings{
+      display: flex;
+      margin-top: 12px;
+      .item{
+        padding-left: 10px;
+      }
+      .rating-box{
+        .star {
+          font-size: x-large;
+          width: 25px;
+          display: inline-block;
+          color: gray;
+        }
+        .star:last-child {
+            margin-right: 0;
+        }
+        .star.on {
+            color: orange;
+        }
+        .star.half:after {
+            content:'\2605';
+            color: orange;
+            position: absolute;
+            margin-left: -20px;
+            width: 10px;
+            overflow: hidden;
+        }
+      }
+
+
+    }
+
+    .surface{
+      padding-top: 12px;
+      padding-bottom: 12px;
+      
+      border-top: solid 1px rgb(202, 202, 202);
+      border-bottom: solid 1px rgb(202, 202, 202);
+
+      .new-price{
+        font-size: 16px;
+        color: #FF6600;
+        font-weight: bold;
+
+        .addInfo{
+          font-size: 14px;
+        }
+      }
+      .old-price{
+        font-size: 14px;
+        color: #999999;
+        text-decoration: line-through;
+        font-weight: bold;
+      }
+    }
+
+    .marchexpo{
+      margin-top: 12px;
+      margin-bottom: 12px;
+      background-color: #FFF0E6;
+      color: #FF6600;
+      display: flex;
+     
+      .march-image{
+        background: url('Logo.png');
+        height:60pt;
+        width: 110pt;
+      }
+
+      .text{
+        margin: auto;
+        width: 50%;
+        font-size: 14pt;
+      }
+    }
+
+    .countdown-timer{
+      margin-top: 12px;
+      margin-bottom: 12px;
+      color: #999999;
+      font-size: 14px;
+  
+      
+      .percentage{
+        color: #FF6600;
+      }
+      .ends-in{
+        float: right;
+        font-size: 16px;
+        span+span{
+          margin-left: 5px;
+        }
+        .icon{
+          background: url('icons8-clock.png');
+          height: 16px;
+          width: 16px;
+          display: inline-block;
+        }
+      }
+    }
+
+    .products-container{
+      padding-top: 12px;
+
+      .item{
+        height: 30pt;
+        padding-top: 10px;
+        display: grid;
+        grid-template-columns: 2fr 1fr 2fr;
+        
+
+        .quantity-buttons{
+          display: block;
+          float: right;
+          font-weight: bold;
+          
+          .increase{
+            color: #FF6600;;
+            width: 30pt;
+            height: 30pt;
+            border: solid 1pt #FF6600;
+          
+          }
+          .decrease{
+            width: 30pt;
+            height: 30pt;
+
+          }
+          .count{
+            width: 30pt;
+            height: 30pt;
+          }
+        }
+      }
+    }
+
+    .trade-assurance{
+      margin-top: 12px;
+      color: #999999;
+
+      .payments{
+        margin-top: 12px;
+        margin-bottom: 12px;
+      }
+      .alibaba{
+        span + span{
+          margin-left: 24px;
+        }
+      }
+    }
+
+  }
+
+  .purchase{
+    width: 90%;
+    margin:12px 24px;
+
+    .info-and-price{
+      span + span {
+        padding-left: 36px;
+      }
+
+      .left{
+        color:#999999;
+        width: 50%;
+        float: left;
+      }
+      .right{
+        font-weight: bold;
+      }
+    }
+
+    .lead-time{
+      margin-top: 30pt;
+      color:#999999;
+      display: flex;
+      span+div{
+        padding-left: 12px;
+      }
+      .tooltip{
+        position: relative;
+        .tooltiptext{
+          visibility: hidden;
+          width: 120px;
+          background-color: #555;
+          color: #fff;
+          text-align: center;
+          border-radius: 6px;
+          padding: 5px 0;
+          position: absolute;
+          z-index: 1;
+          bottom: 125%;
+          left: 50%;
+          margin-left: -60px;
+          opacity: 0;
+          transition: opacity 0.3s;
+        }
+  
+        .tooltiptext::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: #555 transparent transparent transparent;
+        }
+      }
+      .tooltip:hover{
+        .tooltiptext{
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+      
+    }
+
+    .shipping-time{
+      margin-top: 12pt;
+      color:#999999;
+      display: flex;
+      span+div{
+        padding-left: 12px;
+      }
+      .tooltip{
+        position: relative;
+        .tooltiptext{
+          visibility: hidden;
+          width: 240px;
+          background-color: #555;
+          color: #fff;
+          text-align: center;
+          border-radius: 6px;
+          padding: 5px 0;
+          position: absolute;
+          z-index: 1;
+          bottom: 125%;
+          left: 50%;
+          margin-left: -114px;
+          opacity: 0;
+          transition: opacity 0.3s;
+        }
+  
+        .tooltiptext::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: #555 transparent transparent transparent;
+        }
+      }
+      .tooltip:hover{
+        .tooltiptext{
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+
+    .login-to-purchase{
+      margin-top: 12px;
+
+      .login{
+        border-radius: 20pt;
+        height: 25pt;
+        width: 180px;
+        background: #FF6600;
+        color: white;
+        border: none;
+        margin-bottom: 12px;
+      }
+      .contact{
+        border-radius: 20pt;
+        height: 25pt;
+        width: 180px;
+        background: white;
+        color: #FF6600;
+        border: 1px solid #FF6600;
+      }
+    }
+  }
+
+}
+@media only screen and (min-width: 776px) {
+  .App{
+   
+    .image{
+      width: 360px;
+      margin-left: auto;
+      margin-right: auto;
+      img{
+        width: 90%;
+      }
+    }
+    .info-blocks{
+      width: 360px;
+      float: right;
+    }
+ 
+    .purchase{
+      width: 360px;
+    }
+    
+  }
+}
+
+@media only screen and (min-width: 1140px) {
+  .App{
+   
+    .image{
+      width: 416px;
+      height: 416px;
+      float: left;
+      img{
+        width: 100%;
+      }
+    }
+    .info-blocks{
+      width: 360px;
+    }
+ 
+    .purchase{
+      float: right;
+      width: 360px;
+    }
+    
+  }
+}
+
+
+
